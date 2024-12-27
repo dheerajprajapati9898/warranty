@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "993596116653",
+    "project_id": "warrantyapp-d77f4",
+    "storage_bucket": "warrantyapp-d77f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993596116653:android:875d54c09087be2edc4024",
+        "android_client_info": {
+          "package_name": "com.yokohama.warrantyapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB74Dw-l3KS_Epd2TvDVvkau8sNiLobKJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,75 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.yokohama.warrantyapp">
+
+     <!-- Required Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Allows the app to open network sockets (access the internet) -->
+    
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Grants access to the device's camera -->
+    
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Grants access to precise location data from GPS or other location services -->
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Grants access to approximate location data from Wi-Fi or cell towers -->
+    
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <!-- Required for apps to access location in the background on Android 10 (API 29) and above -->
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Allows the app to receive a broadcast when the device finishes booting -->
+
+    <!-- <uses-permission android:name="android.permission.VIBRATE"/> -->
+    <application
+        android:name=".MainApplication"
+        android:label="@string/app_name"
+        android:icon="@mipmap/alliance_galaxy_logo_1024_1024_pixel_icon"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:allowBackup="false"
+        android:theme="@style/AppTheme"
+        android:extractNativeLibs="false"
+        android:requestLegacyExternalStorage="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="com.dieam.reactnativepushnotification.notification_foreground"
+                   android:value="false"/>
+        <!-- Change the resource name to your App's accent color - or any other color you want -->
+
+        <receiver 
+            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationActions"
+            android:exported="true" />
+        <receiver 
+            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher"
+            android:exported="true" />
+        <receiver 
+            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

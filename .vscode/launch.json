@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/screens/RegistrationScreen/RegistrationScreen.tsx",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    },
+    {
+      "name": "Run Android",
+      "cwd": "${workspaceFolder}",
+      "type": "reactnative",
+      "request": "launch",
+      "platform": "android",
+      "enableDebug": false,
+      "isDynamic": true
+    }
+  ]
+}

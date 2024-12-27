@@ -1,0 +1,79 @@
+// Apply necessary plugins
+apply plugin: "com.android.application"
+apply plugin: "org.jetbrains.kotlin.android"
+apply plugin: "com.facebook.react"
+
+// Project-level configurations
+def enableSeparateBuildPerCPUArchitecture = true
+def enableProguardInReleaseBuilds = true
+
+// Android configuration block
+android {
+    ndkVersion rootProject.ext.ndkVersion
+    compileSdk 34
+
+    namespace "com.yokohama.warrantyapp"
+
+    defaultConfig {
+        applicationId "com.yokohama.warrantyapp"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        release {
+            if (project.hasProperty('WARRANTYAPP_STORE_FILE')) {
+                storeFile file(WARRANTYAPP_STORE_FILE)
+                storePassword WARRANTYAPP_STORE_PASSWORD
+                keyAlias WARRANTYAPP_KEY_ALIAS
+                keyPassword WARRANTYAPP_KEY_PASSWORD
+                v2SigningEnabled true
+                enableV2Signing true
+                enableV3Signing true
+                enableV4Signing true
+            }
+        }
+        debug {
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled enableProguardInReleaseBuilds
+            shrinkResources true
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+}
+
+dependencies {
+//  implementation "org.jetbrains.kotlin:kotlin-stdlib::1.8.20"
+
+    implementation("com.facebook.react:react-android")
+    implementation("com.facebook.react:flipper-integration")
+    implementation project(':react-native-fs')
+    implementation "com.facebook.react:react-native:+"
+    implementation project(':react-native-vector-icons')
+    // Ensure the appropriate dependencies are included for React Native, and comment/remove unnecessary ones
+    if (hermesEnabled.toBoolean()) {
+        implementation("com.facebook.react:hermes-android")
+    } else {
+        implementation jscFlavor
+    }
+    implementation project(':react-native-html-to-pdf')
+}
+// Additional React Native configuration
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle")
+//  applyNativeModulesAppBuildGradle(project)

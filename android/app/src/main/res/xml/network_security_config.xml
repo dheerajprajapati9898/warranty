@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">warrantyuat.yokohama-oht.com</domain>
+        <pin-set expiration="2024-12-31">
+            <pin digest="SHA-256">aIdGrnl0ZUGL3hHt0TgQv0CuikzuWD0gTW7J+FHmNvE=</pin>
+        </pin-set>
+    </domain-config>
+</network-security-config>

@@ -1,0 +1,56 @@
+// buildscript {
+//     ext {
+//          googlePlayServicesVersion = "+" // default: "+"
+//     firebaseMessagingVersion = "21.1.0" // default: "21.1.0"
+//         buildToolsVersion = "34.0.0"
+//         minSdkVersion = 21
+//         compileSdkVersion = 34
+//         targetSdkVersion = 34
+//         ndkVersion = "25.1.8937393"
+//         kotlinVersion = "1.8.0"
+//     }
+//     repositories {
+//         google()
+//         mavenCentral()
+//     }
+//     dependencies {
+//         classpath("com.android.tools.build:gradle")
+//         classpath("com.facebook.react:react-native-gradle-plugin")
+//         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+//         classpath 'com.android.tools.build:gradle:8.0.0'
+//  classpath 'com.google.gms:google-services:4.3.15' 
+//     }
+// }
+
+// apply plugin: "com.facebook.react.rootproject"
+
+
+
+
+buildscript {
+    ext {
+        minSdkVersion = 23
+        compileSdkVersion = 34
+        targetSdkVersion = 34
+        ndkVersion = "25.1.8937393"
+        kotlinVersion = "1.8.0"
+    }
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.0.0") // Use the latest version
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        // classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+        // classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+
+    }
+}
+apply plugin: "com.facebook.react.rootproject"
+
+
+
+
