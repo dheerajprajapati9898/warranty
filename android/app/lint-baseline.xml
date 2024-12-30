@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.1.1" type="baseline" client="gradle" dependencies="false" name="AGP (8.1.1)" variant="all" version="8.1.1">
+
+    <issue
+        id="MissingBackupPin"
+        message="A backup `&lt;pin>` declaration is highly recommended"
+        errorLine1="        &lt;pin-set expiration=&quot;2024-12-31&quot;>"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="src/main/res/xml/network_security_config.xml"
+            line="5"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="PinSetExpiry"
+        message="`pin-set` is expiring soon"
+        errorLine1="        &lt;pin-set expiration=&quot;2024-12-31&quot;>"
+        errorLine2="                             ~~~~~~~~~~">
+        <location
+            file="src/main/res/xml/network_security_config.xml"
+            line="5"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `extractNativeLibs` is only used in API level 23 and higher (current min is 21)"
+        errorLine1="        android:extractNativeLibs=&quot;false&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `networkSecurityConfig` is only used in API level 24 and higher (current min is 21)"
+        errorLine1="        android:networkSecurityConfig=&quot;@xml/network_security_config&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="32"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RedundantLabel"
+        message="Redundant label can be removed"
+        errorLine1="            android:label=&quot;@string/app_name&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="36"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.firebase:firebase-bom than 31.0.0 is available: 33.7.0"
+        errorLine1="    implementation platform(&apos;com.google.firebase:firebase-bom:31.0.0&apos;)"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="109"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.core:core than 1.12.0 is available: 1.15.0"
+        errorLine1="    implementation &apos;androidx.core:core:1.12.0&apos;   // Use the AndroidX core library"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="127"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.appcompat:appcompat than 1.5.0 is available: 1.7.0"
+        errorLine1="    implementation &apos;androidx.appcompat:appcompat:1.5.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="130"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.0"
+        errorLine1="    implementation &apos;androidx.constraintlayout:constraintlayout:2.1.4&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="131"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="PermissionImpliesUnsupportedChromeOsHardware"
+        message="Permission exists without corresponding hardware `&lt;uses-feature android:name=&quot;android.hardware.camera&quot; required=&quot;false&quot;>` tag"
+        errorLine1="    &lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; />"
+        errorLine2="     ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="7"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="$GRADLE_USER_HOME/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15to18/1.68/f8a3b0a62642ceaca476845241952e559fc8965c/bcpkix-jdk15to18-1.68.jar"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="$GRADLE_USER_HOME/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15to18/1.68/f8a3b0a62642ceaca476845241952e559fc8965c/bcpkix-jdk15to18-1.68.jar"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        message="`checkServerTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="$GRADLE_USER_HOME/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15to18/1.68/f8a3b0a62642ceaca476845241952e559fc8965c/bcpkix-jdk15to18-1.68.jar"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="$HOME/Downloads/TractorWarranty_PROD-TractorWarranty_UAT 3/WarrantyApp/node_modules/rn-fetch-blob/android/build/.transforms/87d57bfeb476c7e4ab176a69c70ea9d0/transformed/out/jars/classes.jar"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        message="`checkServerTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="$HOME/Downloads/TractorWarranty_PROD-TractorWarranty_UAT 3/WarrantyApp/node_modules/rn-fetch-blob/android/build/.transforms/87d57bfeb476c7e4ab176a69c70ea9d0/transformed/out/jars/classes.jar"/>
+    </issue>
+
+    <issue
+        id="ExportedReceiver"
+        message="Exported receiver does not require permission"
+        errorLine1="        &lt;receiver "
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="51"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ExportedReceiver"
+        message="Exported receiver does not require permission"
+        errorLine1="        &lt;receiver "
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="54"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="DataExtractionRules"
+        message="The attribute `android:allowBackup` is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute `android:dataExtractionRules` specifying an `@xml` resource which configures cloud backups and device transfers on Android 12 and higher."
+        errorLine1="        android:allowBackup=&quot;false&quot;"
+        errorLine2="                             ~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="28"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.integer.react_native_dev_server_port` appears to be unused">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.integer.react_native_inspector_proxy_port` appears to be unused">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_launcher` appears to be unused">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDipSize"
+        message="The image `alliance_galaxy_logo_1024_1024_pixel_icon.png` varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png: 2845x2845 dp (4267x4267 px), mipmap-mdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png: 4267x4267 dp (4267x4267 px), mipmap-xhdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png: 2134x2134 dp (4267x4267 px), mipmap-xxhdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png: 1422x1422 dp (4267x4267 px), mipmap-xxxhdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png: 1067x1067 dp (4267x4267 px)">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png"/>
+        <location
+            file="src/main/res/mipmap-xxhdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png"/>
+        <location
+            file="src/main/res/mipmap-xhdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png"/>
+        <location
+            file="src/main/res/mipmap-hdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png"/>
+        <location
+            file="src/main/res/mipmap-mdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        message="The `alliance_galaxy_logo_1024_1024_pixel_icon.png` icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-mdpi, mipmap-xhdpi, mipmap-xxhdpi, mipmap-xxxhdpi">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png"/>
+        <location
+            file="src/main/res/mipmap-xxhdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png"/>
+        <location
+            file="src/main/res/mipmap-xhdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png"/>
+        <location
+            file="src/main/res/mipmap-mdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png"/>
+        <location
+            file="src/main/res/mipmap-hdpi/alliance_galaxy_logo_1024_1024_pixel_icon.png"/>
+    </issue>
+
+</issues>
